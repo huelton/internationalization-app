@@ -44,8 +44,68 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
-            }
+            },
+            "production-fr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/my-project-fr/",
+              "i18nFile": "src/locale/source.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "i18nMissingTranslation": "error"
+            },
+            "fr": {
+              "aot": true,
+              "outputPath": "dist/my-project-fr/",
+              "i18nFile": "src/locale/source.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "i18nMissingTranslation": "error"
+            },
+            "production-de": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/my-project-de/",
+              "i18nFile": "src/locale/source.de.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "de",
+              "i18nMissingTranslation": "error"
+            },
+            "de": {
+              "aot": true,
+              "outputPath": "dist/my-project-de/",
+              "i18nFile": "src/locale/source.de.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "de",
+              "i18nMissingTranslation": "error"
           }
+        }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -55,6 +115,12 @@
           "configurations": {
             "production": {
               "browserTarget": "internationalization-app:build:production"
+            },
+            "fr": {
+              "browserTarget": "internationalization-app:build:fr"
+            },
+            "de": {
+              "browserTarget": "internationalization-app:build:de"
             }
           }
         },
